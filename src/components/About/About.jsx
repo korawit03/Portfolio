@@ -1,0 +1,64 @@
+import React from 'react';
+import { UserCheck, Sparkles, Terminal, Camera, Music, Coffee } from 'lucide-react';
+import { personalData } from '../../data/portfolioData';
+import './About.css';
+
+export default function About() {
+  return (
+    <section id="about" className="about-section">
+      <div className="container">
+        {/* Section Header */}
+        <div className="section-header">
+          <div className="section-tag">
+            <UserCheck size={16} />
+            <span>เกี่ยวกับ</span>
+          </div>
+          <h2 className="section-title">ใครคือผม?</h2>
+          <p className="section-desc">เบื้องหลังโค้ด แนวคิด และสิ่งที่ขับเคลื่อนการทำงานของผมในทุกๆ วัน</p>
+        </div>
+
+        <div className="about-grid">
+          {/* Main Story Box */}
+          <div className="about-story-card glass-panel">
+            <div className="story-header">
+              <span className="dot dot-red"></span>
+              <span className="dot dot-yellow"></span>
+              <span className="dot dot-green"></span>
+              <span className="story-title">terminal.korawit</span>
+            </div>
+
+            <div className="story-content">
+              <p className="story-paragraph">
+                ผมเป็น <strong className="highlight-text">นักศึกษาเทคโนโลยีสารสนเทศ - หลักสูตรต่อเนื่อง</strong> ที่ชอบสร้างสิ่งที่คนใช้ได้จริง ไม่ใช่แค่ demo สวยงาม
+              </p>
+
+              <p className="story-paragraph">
+                เริ่มเขียนโค้ดตั้งแต่มัธยมปลาย จาก copy-paste ใน Stack Overflow จนวันนี้ออกแบบระบบและเขียนเองได้ตั้งแต่ต้น ภูมิใจทุกครั้งที่โค้ดรันผ่านครั้งแรก
+              </p>
+
+              <p className="story-paragraph">
+                เวลาว่างชอบ <strong className="highlight-text">ถ่ายรูป</strong>, เล่นกีตาร์, และออกไปหาของกินอร่อยๆ ในเมือง — ชอบมองหา micro-interaction เจ๋งๆ ในชีวิตประจำวัน
+              </p>
+
+              <div className="hobby-tags">
+                <span className="hobby-chip"><Camera size={14} /> ถ่ายรูป</span>
+                <span className="hobby-chip"><Music size={14} /> กีตาร์</span>
+                <span className="hobby-chip"><Coffee size={14} /> กาแฟ & คาเฟ่</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats Column */}
+          <div className="about-stats-container">
+            {personalData.stats.map((stat, idx) => (
+              <div key={idx} className="stat-card glass-panel">
+                <div className="stat-number gradient-text">{stat.value}</div>
+                <div className="stat-label">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
