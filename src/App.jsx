@@ -21,9 +21,19 @@ export default function App() {
 
   const toggleTheme = () => {
     const nextTheme = theme === 'dark' ? 'light' : 'dark';
-    setTheme(nextTheme);
-    localStorage.setItem('theme', nextTheme);
-    document.documentElement.setAttribute('data-theme', nextTheme);
+
+    // Modern Web: View Transitions API for theme toggle with fallback
+    if (document.startViewTransition) {
+      document.startViewTransition(() => {
+        setTheme(nextTheme);
+        localStorage.setItem('theme', nextTheme);
+        document.documentElement.setAttribute('data-theme', nextTheme);
+      });
+    } else {
+      setTheme(nextTheme);
+      localStorage.setItem('theme', nextTheme);
+      document.documentElement.setAttribute('data-theme', nextTheme);
+    }
   };
 
   return (

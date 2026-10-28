@@ -1,0 +1,19 @@
+{
+  "name": "ณัฐพล พอร์ตโฟลิโอ — Web Developer",
+  "short_name": "Nattapol",
+  "description": "พอร์ตโฟลิโอ ณัฐพล นักพัฒนาเว็บ & Software Engineering",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
+

@@ -69,6 +69,13 @@
   --shadow-glow: 0 0 30px -5px rgba(2, 132, 199, 0.2);
 }
 
+/* Modern View Transitions API Styles */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Reset & Global */
 * {
   margin: 0;
