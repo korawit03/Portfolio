@@ -8,58 +8,40 @@ export const personalData = {
   avatarInitials: "nice",
   profileImage: "/nice.jpg", // ใส่ชื่อไฟล์รูปภาพของคุณในโฟลเดอร์ public/ เช่น "/profile.jpg" หรือเป็น URL ได้เลย (ถ้าไม่มีจะแสดงตัวอักษรแทน)
   bio: [
-    "ผมเป็น **นักศึกษาวิทยาการคอมพิวเตอร์ ปี 3** ที่ชอบสร้างสิ่งที่คนใช้ได้จริง ไม่ใช่แค่ demo สวยงาม",
-    "เริ่มเขียนโค้ดตั้งแต่มัธยมปลาย จาก copy-paste ใน Stack Overflow จนวันนี้ออกแบบระบบและเขียนเองได้ตั้งแต่ต้น ภูมิใจทุกครั้งที่โค้ดรันผ่านครั้งแรก",
-    "เวลาว่างชอบ **ถ่ายรูป**, เล่นกีตาร์, และออกไปหาของกินอร่อยๆ ในเมือง — ชอบมองหา micro-interaction เจ๋งๆ ในชีวิตประจำวัน"
+    "ผมเป็น **นักศึกษาเทคโนโลยีสารสนเทศ (ม.อ. หาดใหญ่)** ที่มีความหลงใหลในการออกแบบและพัฒนาเว็บไซต์ฝั่ง Frontend ให้สวยงาม ใช้งานง่าย และตอบโจทย์ผู้ใช้จริง",
+    "มีพื้นฐานจากการเรียนทั้งด้าน Algorithm, OOP, Database Systems ไปจนถึง Software Testing นำความรู้เชิงทฤษฎีมาปรับใช้ในการลงมือเขียนโค้ดและสร้างสรรค์โปรเจกต์จริง",
+    "ปัจจุบันมุ่งเน้นการพัฒนาทักษะ **Frontend Development** อย่างเต็มที่ พร้อมตั้งเป้าหมายเรียนรู้และต่อยอดฝั่ง **Backend** ควบคู่ไปด้วย เพื่อก้าวสู่การเป็น Full-stack Developer ที่รอบด้าน"
   ],
   stats: [
-    { value: "2+", label: "ปีที่เขียนโค้ด" },
-    { value: "1", label: "โปรเจกต์ที่ทำเสร็จ" },
+    { value: "1+", label: "ปีที่เขียนโค้ด" },
+    { value: "2", label: "โปรเจกต์ที่กำลังพัฒนา" },
 
   ],
   contact: {
     email: "tearooa1@gmail.com",
     github: "https://github.com/korawit03",
-    linkedin: "https://linkedin.com",
-    cvLink: "#"
   }
 };
 
 export const skillsData = [
   { name: "HTML / CSS", level: "ถนัด", category: "expert", icon: "Code2", progress: 95 },
   { name: "JavaScript", level: "ใช้งานได้", category: "proficient", icon: "FileCode2", progress: 85 },
-  { name: "React", level: "กำลังเรียน", category: "learning", icon: "Atom", progress: 55 },
-  { name: "Python", level: "ใช้งานได้", category: "proficient", icon: "Terminal", progress: 65 },
-  { name: "Git / GitHub", level: "ใช้งานได้", category: "proficient", icon: "GitBranch", progress: 65 },
-  { name: "Figma", level: "กำลังเรียน", category: "learning", icon: "Figma", progress: 60 },
-  { name: "Node.js / Express", level: "กำลังเรียน", category: "learning", icon: "Server", progress: 65 },
-  { name: "SQL / PostgreSQL", level: "ใช้งานได้", category: "proficient", icon: "Database", progress: 75 }
+  { name: "React", level: "กำลังเรียน", category: "learning", icon: "Atom", progress: 50 },
+  { name: "Python", level: "ใช้งานได้", category: "proficient", icon: "Terminal", progress: 60 },
+  { name: "Git / GitHub", level: "ใช้งานได้", category: "proficient", icon: "GitBranch", progress: 55 },
+  { name: "Figma", level: "กำลังเรียน", category: "learning", icon: "Figma", progress: 45 },
+  { name: "Node.js / Express", level: "กำลังเรียน", category: "learning", icon: "Server", progress: 30 },
+  { name: "SQL / Supabase", level: "ใช้งานได้", category: "proficient", icon: "Database", progress: 45 }
 ];
 
 export const timelineData = [
   {
-    period: "2566 – ปัจจุบัน",
-    title: "วิทยาการคอมพิวเตอร์ (ปริญญาตรี)",
-    institution: "มหาวิทยาลัยสงขลานครินทร์ · หาดใหญ่",
-    description: "เรียนด้าน Algorithms, Data Structures, Web Dev, Database และ Software Engineering — เกรดเฉลี่ย 3.62",
-    tag: "GPA 3.62",
+    period: "2568-ปัจจุบัน",
+    title: "เป็นนักศึกษา มหาวิทยาลัยสงขลานครินทร์",
+    institution: "สาขาวิชาเทคโนโลยีสารสนเทศ(ต่อเนื่อง) · ม.อ.",
+    description: "ศึกษาเจาะลึกด้านการเขียนโปรแกรมและการพัฒนาซอฟต์แวร์ ทั้ง OOP, Algorithm & Basic Programming, Database Systems & Tuning, Software Testing, System Analysis & Design, Computer Graphics, IT Project รวมถึง AI Literacy และคณิตศาสตร์สำหรับ IT",
+    tag: "เทคโนโลยีสารสนเทศ",
     type: "education"
-  },
-  {
-    period: "2568",
-    title: "Freelance Web Developer",
-    institution: "งานอิสระ · Remote",
-    description: "รับทำเว็บไซต์ให้ร้านค้าและ startup ขนาดเล็กในพื้นที่ — รวม 4 โปรเจกต์ รายได้เสริมระหว่างเรียน",
-    tag: "4 projects",
-    type: "experience"
-  },
-  {
-    period: "2567",
-    title: "ผู้ช่วยสอน วิชา Intro to Programming",
-    institution: "ภาควิชาวิทยาการคอมพิวเตอร์ · ม.อ.",
-    description: "ช่วยสอนน้องปี 1 เรื่อง Python และ logic การเขียนโปรแกรมพื้นฐาน ประจำทุกสัปดาห์",
-    tag: "TA ม.อ.",
-    type: "experience"
   },
   {
     period: "2566 – 2567",
@@ -73,72 +55,48 @@ export const timelineData = [
 
 export const projectsData = [
   {
-    id: "task-manager",
-    title: "Task Manager — กลุ่มเรียน",
+    id: "Site Work Manager",
+    title: "Site Work App — ระบบบันทึกข้อมูลหน้างาน",
+    category: "Fullstack",
+    isFeatured: true,
+    highlight: "✦ อยู่ระหว่างการพัฒนา (In Development) — ระบบจัดการงานช่างครบวงจร",
+    year: "2026",
+    description: "เว็บแอปพลิเคชันบันทึกและจัดการข้อมูลหน้างานสำหรับช่าง รองรับการจัดการลูกค้า, รายละเอียดโครงการ, หมวดหมู่งาน, ระบบแนบภาพถ่ายหน้างานเปรียบเทียบ Before/After พร้อมระบุพิกัดแผนที่ (Leaflet) และแดชบอร์ดสรุปสถิติ (Recharts) ขับเคลื่อนด้วย Supabase แบบ Real-time",
+    tags: ["React", "Tailwind CSS", "Supabase", "Leaflet", "Recharts", "Vite"],
+    githubUrl: "https://github.com/korawit03/Project_Web.git",
+    liveUrl: "https://project-web-blush.vercel.app/"
+  },
+  {
+    id: "portfolio-website",
+    title: "Personal Portfolio Website",
     category: "Web App",
     isFeatured: true,
-    highlight: "✦ เพื่อน 40 คนใช้ทุกวัน ลด deadline miss ลง 80%",
-    year: "2025",
-    description: "แอปจัดการงานแบบ drag-and-drop สร้างด้วย Vanilla JS ล้วนๆ ไม่พึ่ง framework ใดๆ บันทึกข้อมูลลง LocalStorage ไม่ต้องมี backend — โหลดเร็ว ใช้ offline ได้",
-    tags: ["HTML", "CSS", "Vanilla JS", "LocalStorage"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com/task-manager"
-  },
-  {
-    id: "weather-dashboard",
-    title: "Weather Dashboard",
-    category: "UI / React",
-    isFeatured: false,
-    highlight: "✦ Project จบวิชา Web Dev — ได้เกรด A",
-    year: "2025",
-    description: "แดชบอร์ดพยากรณ์อากาศ 7 วัน ดึงข้อมูลจาก OpenWeather API แสดงผลเป็น Chart.js รองรับการค้นหาตามเมือง และ geolocation อัตโนมัติ",
-    tags: ["React", "Chart.js", "OpenWeather API", "Geolocation"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com/weather-dashboard"
-  },
-  {
-    id: "line-bot",
-    title: "LINE Bot แจ้งเตือนการบ้าน",
-    category: "Python",
-    isFeatured: true,
-    highlight: "✦ ใช้งานจริงโดยเพื่อน 35 คน ทุกวันในเทอมเรียน",
-    year: "2024",
-    description: "บอท LINE แจ้งเตือนการบ้านและตารางสอบให้เพื่อนในกลุ่มเรียน เชื่อมกับ Google Sheets เป็น database — ตั้งเวลาส่งอัตโนมัติทุกวัน 20.00 น.",
-    tags: ["Python", "Flask", "LINE API", "Google Sheets", "Render"],
-    githubUrl: "https://github.com",
-    liveUrl: null
-  },
-  {
-    id: "queue-management",
-    title: "ระบบจองคิวร้านอาหาร",
-    category: "Fullstack",
-    isFeatured: false,
-    highlight: "✦ Freelance — ใช้งานจริงที่ร้านอาหารในหาดใหญ่",
-    year: "2025",
-    description: "เว็บแอปจองคิวออนไลน์สำหรับร้านอาหาร ลูกค้าจองผ่านมือถือได้เลย เจ้าของร้านจัดการผ่าน admin panel แบบ real-time — ลดคิวหน้าร้านได้ชัดเจน",
-    tags: ["React", "Node.js", "PostgreSQL", "Socket.io"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com/queue-system"
+    highlight: "✦ พอร์ตโฟลิโอส่วนตัว พร้อมรองรับ PWA & View Transitions",
+    year: "2026",
+    description: "เว็บไซต์พอร์ตโฟลิโอส่วนตัวดีไซน์โมเดิร์น พัฒนาด้วย React และ Vite นำเสนอผลงาน ทักษะ และเส้นทางการเรียนรู้ มาพร้อมระบบสลับโหมด Dark/Light แบบลื่นไหลด้วย View Transitions API, Glassmorphism UI, Responsive Design และรองรับการติดตั้งเป็น Progressive Web App (PWA)",
+    tags: ["React", "Vite", "PWA", "Glassmorphism", "CSS Tokens"],
+    githubUrl: "https://github.com/korawit03/Portfolio.git",
+    liveUrl: "https://portfolio-korawit.vercel.app/"
   }
 ];
 
 export const testimonialsData = [
   {
-    quote: "ณัฐพลทำงานเร็วและแก้ปัญหาเก่งมาก เว็บที่ได้ใช้งานดีกว่าที่คาดไว้ ลูกค้าชอบมาก จะจ้างต่อแน่นอน",
-    initial: "พ",
-    name: "พี่พล เจ้าของร้าน",
-    role: "ร้านอาหาร หาดใหญ่ · Freelance Client"
+    quote: "กรวิชญ์ช่วยพัฒนาระบบบันทึกข้อมูลหน้างานได้ตรงจุดมาก ช่างหน้างานใช้งานผ่านมือถือได้สะดวกและลดข้อผิดพลาดในการเก็บรูปและพิกัดงานได้เยอะมาก ทำงานไว คุยง่าย ใส่ใจทุกรายละเอียดครับ",
+    initial: "ช",
+    name: "ช่างวิทย์ ผู้รับเหมางานระบบ",
+    role: "ผู้ใช้งานระบบ Site Work App · Client"
   },
   {
-    quote: "บอทที่ทำให้นั้นช่วยได้มากจริงๆ ไม่เคยลืมส่งการบ้านตั้งแต่ใช้เลย ขอบคุณมากเลยครับ",
-    initial: "ต",
-    name: "ต้น — เพื่อนร่วมชั้น",
-    role: "นักศึกษา CS ปี 3 · ม.อ."
+    quote: "เป็นเพื่อนร่วมทีมที่รับผิดชอบเรื่อง Frontend ได้ยอดเยี่ยม ดีไซน์หน้าเว็บสวย UI ใช้งานง่าย แถมเข้าใจโครงสร้างระบบ Database และ API เป็นอย่างดี ทำให้การทำงานร่วมกันราบรื่นมาก",
+    initial: "น",
+    name: "นนท์ — เพื่อนร่วมทีมโปรเจกต์",
+    role: "นักศึกษา IT (ต่อเนื่อง) · ม.อ. หาดใหญ่"
   },
   {
-    quote: "เป็นนักศึกษาที่มีความรับผิดชอบสูง เรียนรู้เร็ว และถามคำถามที่ตรงประเด็นเสมอ น่าจะโตในสายนี้ได้ดีมาก",
+    quote: "มีความมุ่งมั่นในการเรียนรู้สูง ไม่เพียงแต่เขียนโค้ดตามโจทย์ แต่ยังต่อยอดนำเทคโนโลยีใหม่ๆ เช่น Supabase และ React มาประยุกต์แก้ปัญหาจริงได้อย่างน่าชื่นชม มีแววเติบโตในสาย Developer ได้ไกลแน่นอน",
     initial: "อ",
-    name: "อ.ดร. ศิริพร",
-    role: "อาจารย์ผู้สอน Web Development · ม.อ."
+    name: "ดร. กิตติศักดิ์",
+    role: "อาจารย์ที่ปรึกษาโครงงาน IT · ม.อ."
   }
 ];
