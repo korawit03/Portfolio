@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, ArrowUp } from 'lucide-react';
+import { personalData } from '../../data/portfolioData';
 import './Footer.css';
 
 export default function Footer() {
@@ -12,11 +13,11 @@ export default function Footer() {
       <div className="container footer-container">
         <div className="footer-left">
           <div className="footer-logo">
-            <span className="logo-badge-small">N.</span>
-            <span>Nattapol Portfolio</span>
+            <span className="logo-badge-small">{personalData.avatarInitials?.slice(0, 1)?.toUpperCase() || 'K.'}</span>
+            <span>{personalData.name} Portfolio</span>
           </div>
           <p className="footer-text">
-            © 2026 Nattapol · สร้างด้วย HTML, CSS, React และกาแฟ ☕
+            © 2026 {personalData.name} · สร้างด้วย HTML, CSS, React และกาแฟ ☕
           </p>
         </div>
 

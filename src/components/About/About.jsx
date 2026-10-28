@@ -28,17 +28,24 @@ export default function About() {
             </div>
 
             <div className="story-content">
-              <p className="story-paragraph">
-                ผมเป็น <strong className="highlight-text">นักศึกษาเทคโนโลยีสารสนเทศ - หลักสูตรต่อเนื่อง</strong> ที่ชอบสร้างสิ่งที่คนใช้ได้จริง ไม่ใช่แค่ demo สวยงาม
-              </p>
-
-              <p className="story-paragraph">
-                เริ่มเขียนโค้ดตั้งแต่มัธยมปลาย จาก copy-paste ใน Stack Overflow จนวันนี้ออกแบบระบบและเขียนเองได้ตั้งแต่ต้น ภูมิใจทุกครั้งที่โค้ดรันผ่านครั้งแรก
-              </p>
-
-              <p className="story-paragraph">
-                เวลาว่างชอบ <strong className="highlight-text">ถ่ายรูป</strong>, เล่นกีตาร์, และออกไปหาของกินอร่อยๆ ในเมือง — ชอบมองหา micro-interaction เจ๋งๆ ในชีวิตประจำวัน
-              </p>
+              {personalData.bio.map((paragraph, index) => {
+                // Parse markdown-style **bold** text cleanly
+                const parts = paragraph.split(/(\*\*.*?\*\*)/g);
+                return (
+                  <p key={index} className="story-paragraph">
+                    {parts.map((part, i) => {
+                      if (part.startsWith('**') && part.endsWith('**')) {
+                        return (
+                          <strong key={i} className="highlight-text">
+                            {part.slice(2, -2)}
+                          </strong>
+                        );
+                      }
+                      return part;
+                    })}
+                  </p>
+                );
+              })}
 
               <div className="hobby-tags">
                 <span className="hobby-chip"><Camera size={14} /> ถ่ายรูป</span>

@@ -64,7 +64,7 @@ export const projectsData = [
     description: "เว็บแอปพลิเคชันบันทึกและจัดการข้อมูลหน้างานสำหรับช่าง รองรับการจัดการลูกค้า, รายละเอียดโครงการ, หมวดหมู่งาน, ระบบแนบภาพถ่ายหน้างานเปรียบเทียบ Before/After พร้อมระบุพิกัดแผนที่ (Leaflet) และแดชบอร์ดสรุปสถิติ (Recharts) ขับเคลื่อนด้วย Supabase แบบ Real-time",
     tags: ["React", "Tailwind CSS", "Supabase", "Leaflet", "Recharts", "Vite"],
     githubUrl: "https://github.com/korawit03/Project_Web.git",
-    liveUrl: "https://project-web-blush.vercel.app/"
+    liveUrl: "https://siteworkapp.vercel.app/"
   },
   {
     id: "portfolio-website",

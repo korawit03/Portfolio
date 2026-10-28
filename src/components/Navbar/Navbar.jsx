@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, Sparkles } from 'lucide-react';
+import { personalData } from '../../data/portfolioData';
 import './Navbar.css';
 
 export default function Navbar({ theme, toggleTheme }) {
@@ -45,8 +46,8 @@ export default function Navbar({ theme, toggleTheme }) {
       <div className="container navbar-container">
         {/* Logo */}
         <a href="#" className="nav-logo">
-          <span className="logo-badge">N.</span>
-          <span className="logo-name">Korawit</span>
+          <span className="logo-badge">{personalData.avatarInitials?.slice(0, 1)?.toUpperCase() || 'K.'}</span>
+          <span className="logo-name">{personalData.name}</span>
         </a>
 
         {/* Desktop Nav Items */}
