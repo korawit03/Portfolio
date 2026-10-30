@@ -2,9 +2,9 @@ export const personalData = {
   name: "กรวิชญ์",
   fullName: "กรวิชญ์ วิทยาจารุประพันธ์", // Custom placeholder that can be customized
   role: "นักพัฒนาเว็บ",
-  subtitle: "สร้างเว็บและแอปที่ใช้งานจริง — สำหรับนักเรียน, กลุ่มเพื่อน, และ startup ขนาดเล็ก",
-  status: "พร้อมรับงาน Freelance",
-  learningStatus: "กำลังเรียนรู้เทคโนโลยีใหม่ๆ",
+  subtitle: "สร้างสรรค์เว็บและแอปพลิเคชันที่ใช้งานจริง — มุ่งเน้นการเรียนรู้และพัฒนาทักษะด้าน Software & Web Development",
+  status: "กำลังศึกษา & พัฒนาโปรเจกต์",
+  learningStatus: "กำลังเรียนรู้เทคโนโลยีใหม่ๆ อยู่เสมอ",
   avatarInitials: "nice",
   profileImage: "/nice.jpg", // ใส่ชื่อไฟล์รูปภาพของคุณในโฟลเดอร์ public/ เช่น "/profile.jpg" หรือเป็น URL ได้เลย (ถ้าไม่มีจะแสดงตัวอักษรแทน)
   bio: [

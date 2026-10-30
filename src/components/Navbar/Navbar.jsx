@@ -76,7 +76,7 @@ export default function Navbar({ theme, toggleTheme }) {
 
           <a href="#contact" className="nav-cta-btn">
             <Sparkles size={16} />
-            <span>คุยงาน</span>
+            <span>ติดต่อ</span>
           </a>
 
           {/* Mobile Menu Hamburger */}

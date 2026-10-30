@@ -89,7 +89,7 @@ export default function Hero() {
 
             <div className="avatar-floating-badge badge-bottom-left">
               <span className="badge-pulse"></span>
-              <span>พร้อมรับงาน Freelance</span>
+              <span>กำลังศึกษา & พัฒนาโปรเจกต์</span>
             </div>
           </div>
         </div>

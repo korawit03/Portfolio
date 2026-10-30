@@ -9,7 +9,7 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    purpose: 'hire-project',
+    purpose: 'say-hi',
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -32,7 +32,7 @@ export default function Contact() {
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({ name: '', email: '', purpose: 'hire-project', message: '' });
+      setFormData({ name: '', email: '', purpose: 'say-hi', message: '' });
     }, 4500);
   };
 
@@ -89,7 +89,7 @@ export default function Contact() {
 
             <div className="contact-status-card">
               <div className="pulse-indicator"></div>
-              <span>เปิดรับงาน Freelance เว็บไซต์ / Web App ทันที</span>
+              <span>เปิดรับการแลกเปลี่ยนความรู้ & พูดคุยโปรเจกต์</span>
             </div>
           </div>
 
@@ -139,10 +139,10 @@ export default function Contact() {
                     value={formData.purpose}
                     onChange={handleChange}
                   >
-                    <option value="hire-project">จ้างทำเว็บไซต์ / โปรเจกต์</option>
-                    <option value="internship">เสนอโอกาสฝึกงาน / ร่วมงาน</option>
-                    <option value="consult">ปรึกษา / สอบถามทั่วไป</option>
                     <option value="say-hi">ทักทาย / แลกเปลี่ยนมุมมอง</option>
+                    <option value="consult">ปรึกษา / สอบถามทั่วไป</option>
+                    <option value="project-talk">พูดคุยแลกเปลี่ยนเรื่องโปรเจกต์</option>
+                    <option value="internship">ติดต่อโอกาสฝึกงาน / ร่วมงาน</option>
                   </select>
                 </div>
 
