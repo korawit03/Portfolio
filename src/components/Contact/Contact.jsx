@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Mail, Send, CheckCircle, MessageSquare } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '../Icons';
+import { Mail, Send, CheckCircle, AlertCircle, MessageSquare, Loader } from 'lucide-react';
+import { GithubIcon } from '../Icons';
 import confetti from 'canvas-confetti';
 import { personalData } from '../../data/portfolioData';
 import './Contact.css';
+
+const WEB3FORMS_KEY = '831e8384-9a9a-42a7-aa8a-489260adc45a';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -13,27 +15,57 @@ export default function Contact() {
     message: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
-    // Trigger celebratory confetti
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 }
-    });
+    setIsLoading(true);
+    setError('');
 
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: '', email: '', purpose: 'say-hi', message: '' });
-    }, 4500);
+    try {
+      const purposeLabel = {
+        'say-hi': 'ทักทาย / แลกเปลี่ยนมุมมอง',
+        'consult': 'ปรึกษา / สอบถามทั่วไป',
+        'project-talk': 'พูดคุยแลกเปลี่ยนเรื่องโปรเจกต์',
+        'internship': 'ติดต่อโอกาสฝึกงาน / ร่วมงาน',
+      }[formData.purpose] || formData.purpose;
+
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `[Portfolio] ${purposeLabel} — จาก ${formData.name}`,
+          from_name: formData.name,
+          email: formData.email,
+          message: `วัตถุประสงค์: ${purposeLabel}\n\n${formData.message}`,
+          botcheck: '',
+        }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+        setIsSubmitted(true);
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: '', email: '', purpose: 'say-hi', message: '' });
+        }, 5000);
+      } else {
+        setError('ส่งไม่สำเร็จ กรุณาลองใหม่อีกครั้งครับ');
+      }
+    } catch {
+      setError('เกิดข้อผิดพลาด กรุณาตรวจสอบการเชื่อมต่ออินเทอร์เน็ตครับ');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -159,10 +191,26 @@ export default function Contact() {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-submit">
-                  <Send size={18} />
-                  <span>ส่งข้อความ</span>
+                <button type="submit" className="btn btn-primary btn-submit" disabled={isLoading}>
+                  {isLoading ? (
+                    <>
+                      <Loader size={18} className="spin" />
+                      <span>กำลังส่ง...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Send size={18} />
+                      <span>ส่งข้อความ</span>
+                    </>
+                  )}
                 </button>
+
+                {error && (
+                  <div className="form-error-msg">
+                    <AlertCircle size={16} />
+                    <span>{error}</span>
+                  </div>
+                )}
               </form>
             )}
           </div>
