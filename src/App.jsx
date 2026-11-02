@@ -8,6 +8,7 @@ import Projects from './components/Projects/Projects';
 import Testimonials from './components/Testimonials/Testimonials';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
   const [theme, setTheme] = useState('dark');
@@ -59,6 +60,9 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
