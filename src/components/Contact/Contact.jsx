@@ -37,18 +37,23 @@ export default function Contact() {
         'internship': 'ติดต่อโอกาสฝึกงาน / ร่วมงาน',
       }[formData.purpose] || formData.purpose;
 
+      // Web3Forms accepts FormData natively, which guarantees field names (name, email, message) map to Dashboard columns
+      const submissionData = new FormData();
+      submissionData.append('access_key', WEB3FORMS_KEY);
+      submissionData.append('name', formData.name);
+      submissionData.append('from_name', formData.name);
+      submissionData.append('email', formData.email);
+      submissionData.append('subject', `[Portfolio] ${purposeLabel} — จาก ${formData.name}`);
+      submissionData.append('purpose', purposeLabel);
+      submissionData.append('message', `วัตถุประสงค์: ${purposeLabel}\n\n${formData.message}`);
+      submissionData.append('botcheck', '');
+
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          name: formData.name,
-          from_name: formData.name,
-          email: formData.email,
-          subject: `[Portfolio] ${purposeLabel} — จาก ${formData.name}`,
-          message: `วัตถุประสงค์: ${purposeLabel}\n\n${formData.message}`,
-          botcheck: '',
-        }),
+        headers: {
+          'Accept': 'application/json'
+        },
+        body: submissionData,
       });
 
       const data = await res.json();
