@@ -42,9 +42,10 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           access_key: WEB3FORMS_KEY,
-          subject: `[Portfolio] ${purposeLabel} — จาก ${formData.name}`,
+          name: formData.name,
           from_name: formData.name,
           email: formData.email,
+          subject: `[Portfolio] ${purposeLabel} — จาก ${formData.name}`,
           message: `วัตถุประสงค์: ${purposeLabel}\n\n${formData.message}`,
           botcheck: '',
         }),
