@@ -40,11 +40,19 @@ export default function Hero() {
             </a>
 
             <a
-              href={personalData.contact.cvLink}
+              href={personalData.contact.cvLink || '#contact'}
+              download="Resume-Korawit.pdf"
               className="btn btn-secondary"
-              onClick={(e) => {
-                e.preventDefault();
-                alert('กำลังเตรียมไฟล์ CV สำหรับดาวน์โหลดครับ!');
+              onClick={async (e) => {
+                try {
+                  const check = await fetch(personalData.contact.cvLink, { method: 'HEAD' });
+                  if (!check.ok) {
+                    e.preventDefault();
+                    alert('ขออภัยครับ ขณะนี้กำลังอยู่ในช่วงอัปเดตไฟล์ Resume ฉบับล่าสุด สามารถติดต่อผ่านอีเมล tearooa1@gmail.com ได้โดยตรงครับ');
+                  }
+                } catch {
+                  // If head check fails, proceed normally
+                }
               }}
             >
               <Download size={18} />

@@ -20,6 +20,7 @@ export const personalData = {
   contact: {
     email: "tearooa1@gmail.com",
     github: "https://github.com/korawit03",
+    cvLink: "/resume.pdf",
   }
 };
 
